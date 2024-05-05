@@ -1,0 +1,38 @@
+body {
+    margin: 0%;
+
+/* varaibles */
+
+--bkg-color: white;
+--bkg-sec: lightgray;
+--main-color: azure;
+--accent-color: yellow;
+--prim-font: black;
+--sec-font: gray;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) minmax(800px, 5fr);
+    grid-template-rows: minmax(100px, 1fr) minmax(400px, 4fr);
+
+    grid-template-areas: 
+    "side header"
+    "side main";
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--bkg-color)
+}
+
+.side {
+    grid-area: side;
+    background-color: var(--main-color);
+
+}
+
+.main {
+    grid-area: main;    
+    background-color: var(--bkg-sec);
+}
