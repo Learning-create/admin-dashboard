@@ -11,6 +11,33 @@ body {
 --sec-font: gray;
 }
 
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+ .pfp{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    position: relative;
+    bottom: 20%;
+  }
+
 .grid-container {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) minmax(800px, 5fr);
@@ -23,16 +50,37 @@ body {
 
 .header {
     grid-area: header;
-    background-color: var(--bkg-color)
+    background-color: var(--bkg-color);
+
+    > *{
+        border: 1px solid blueviolet;
+    }
 }
 
 .side {
     grid-area: side;
     background-color: var(--main-color);
 
+    > *{
+        border: 1px solid blueviolet;
+    }
+}
+
+.icon-dash {
+    height: 2rem;
+    width: 2rem;
+}
+
+.icon {
+    height: 2rem;
+    aspect-ratio: 1/1;
 }
 
 .main {
     grid-area: main;    
     background-color: var(--bkg-sec);
+
+    > *{
+        border: 1px solid blueviolet;
+    }
 }
