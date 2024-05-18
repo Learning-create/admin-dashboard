@@ -5,9 +5,9 @@ body {
 /* variables */
 
 --bkg-color: white;
---bkg-sec: lightgray;
---main-color: yellow;
---accent-color: yellow;
+--bkg-sec: #C7B0B1;
+--main-color: #A26769;
+--accent-color: #A26769;
 --prim-font: black;
 --sec-font: gray;
 }
@@ -21,6 +21,8 @@ li {
 a {
     text-decoration: none;
     color: black;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .visuallyhidden {
@@ -103,7 +105,7 @@ a {
 }
 
 .notification-button:hover {
-    box-shadow: inset 1px 1px 10px var(--accent-color);
+    box-shadow: inset 1px 1px 20px var(--accent-color);
 }
 
 .user-acc {
@@ -142,9 +144,6 @@ a {
     flex-direction: column;
     gap: 2%;
 
-    > *{
-        border: 1px solid grayviolet;
-    }
 }
 
 .nav,
@@ -221,10 +220,11 @@ a:hover .pfp {
         font-size: 1.20rem;
         border-radius: 30px;
         border: 0ch;
+        color: white;
     }
 
     >button:hover {
-        box-shadow: 1px 1px 5px;
+        box-shadow: 1px 1px 5px var(--accent-color);
     }
 }
 
@@ -278,13 +278,20 @@ h4 {
 
 
 .posts div {
-    border: 1px solid black;
     border-left: 10px solid var(--accent-color);
     padding: .60rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border-radius: 10px;
     background-color: var(--bkg-color);
+
+    > * {
+        width: 30ch;
+    }
+}
+
+.title-post{
+    font-weight: 700;
 }
 
 .side-main {
@@ -294,7 +301,6 @@ h4 {
 }
 
 .card {
-    border: 1px solid;
     border-radius: 10px;
     padding: 10px 30px;
     background-color: var(--bkg-color);
@@ -314,7 +320,7 @@ h4 {
 }
 
 .ann:hover {
-    background-color: rgba(173, 216, 230, 0.342);
+    background-color: #ffe8e9;
 
 }
 
@@ -335,7 +341,7 @@ h4 {
 }
 
 .trend-acc:hover {
-    background-color: rgba(173, 216, 230, 0.342);
+    background-color: #ffe8e9;
 }
 
 .trend {
@@ -351,4 +357,107 @@ h4 {
 
 .accs-text {
     color: var(--sec-font);
+}
+
+@media screen and (max-width: 1050px) {
+
+    .grid-container {
+        grid-template-columns: 100px 1fr;
+    }
+
+    .header{
+
+        gap: 0px;
+        
+    }
+
+    .top-header {
+        grid-template-columns: 85% 1fr;
+    }
+
+    .icon-search {
+        right: 30px;
+    }
+
+    .name {
+        visibility: collapse;
+        position: absolute;
+    }
+
+    .acc-post {
+        grid-template-columns: 1fr;
+    }
+
+    .pfp-acc {
+        height: 50px;
+        width: 50px;
+    }
+    .name-greet {
+        display: flex;
+        flex-direction: column;
+
+        > p {
+            margin-top: auto;
+            margin-bottom: auto;
+            position: static;
+        }
+    }
+
+    .name-greet .name {
+        visibility: visible;
+    }
+
+    .post {
+        margin: auto;
+        width: 300px;
+    }
+
+    .side {
+        width: 100px;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .icon-dash {
+        width: 60px;
+        height: 60px;
+        margin: 25%;
+    }
+
+    .branding span {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .nav a,
+    .options a {
+        visibility: hidden;
+
+        > svg {
+            visibility: visible;
+        }
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+    }
+
+    .posts {
+        grid-template-columns: 1fr;
+        font-size: 1.35rem;
+    }
+
+    .posts div p {
+        width: 50ch;
+    }
+
+    .side-main {
+        visibility: hidden;
+        position: absolute;
+    }
+
+
+    .trend-acc img {
+        height: auto;
+    }
 }
